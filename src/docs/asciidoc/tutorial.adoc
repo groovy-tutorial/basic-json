@@ -1,0 +1,25 @@
+= Reading and writing JSON
+Duncan Dickinson <duncan@groovy-tutorial.org>
+v0.1, 2015-08-25
+:groovy-version: 2.4.4
+:licence: Apache License, Version 2.0
+:licence-url: http://www.apache.org/licenses/LICENSE-2.0
+:jbake-type: page
+:jbake-status: draft
+:src: https://github.com/groovy-tutorial/basic-json
+:sourcedir: ../../main/groovy
+:level: basic
+:keywords: documentation, manual
+:description: This tutorial will explore
+:toc:
+
+Groovy ...
+
+.Using this tutorial
+****
+For details on running the tutorial on your own system, please refer to the http://www.groovy-tutorial.org/GettingStarted.html[Getting started guide]
+
+* Source code: {src}[{src}]
+* Licence (text and code): {licence-url}[{licence}]
+****
+

@@ -1,0 +1,39 @@
+apply plugin: 'groovy'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        //See: https://github.com/asciidoctor/asciidoctor-gradle-plugin
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
+
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.4'
+}
+
+apply plugin: 'codenarc'
+project.codenarc.toolVersion = 0.24
+codenarcMain {
+    ignoreFailures true
+    configFile file('config/codenarc/ruleset.groovy')
+}
+
+apply plugin: 'org.asciidoctor.convert'
+asciidoctor {
+    resources {
+        from('src/main/groovy') {
+            include '*.groovy'
+            include 'resources/*'
+        }
+        into 'src'
+    }
+}
