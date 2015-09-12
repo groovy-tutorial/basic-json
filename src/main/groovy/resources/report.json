@@ -1,5 +1,5 @@
 {
-  "reports": [
+  "students": [
     {
       "id": 834657,
       "name": "Francine Nurk",
@@ -13,7 +13,7 @@
           "Maths": {
             "Test score": "91%",
             "Project score": "98%",
-            "Comment": "Francine is a giften mathematician"
+            "Comment": "Francine is a gifted mathematician"
           },
           "Art": {
             "Test score": "43%",
@@ -22,6 +22,21 @@
           }
         },
         "2012": {
+          "Science": {
+            "Test score": "88%",
+            "Project score": "",
+            "Comment": ""
+          },
+          "Maths": {
+            "Test score": "",
+            "Project score": "%",
+            "Comment": ""
+          },
+          "Art": {
+            "Test score": "%",
+            "Project score": "%",
+            "Comment": ""
+          }
         }
       }
     },
@@ -47,6 +62,21 @@
           }
         },
         "2012": {
+          "Science": {
+            "Test score": "",
+            "Project score": "",
+            "Comment": ""
+          },
+          "Maths": {
+            "Test score": "",
+            "Project score": "%",
+            "Comment": ""
+          },
+          "Art": {
+            "Test score": "%",
+            "Project score": "%",
+            "Comment": ""
+          }
         }
       }
     }
