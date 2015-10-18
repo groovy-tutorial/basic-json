@@ -1,15 +1,5 @@
-apply plugin: 'groovy'
-
-buildscript {
-    repositories {
-        jcenter()
-    }
-
-    dependencies {
-        //See: https://github.com/asciidoctor/asciidoctor-gradle-plugin
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
-
-    }
+plugins {
+    id 'groovy'
 }
 
 repositories {
@@ -17,23 +7,20 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.4.4'
+    compile 'org.codehaus.groovy:groovy-all:2.4.5'
 }
 
-apply plugin: 'codenarc'
-project.codenarc.toolVersion = 0.24
-codenarcMain {
-    ignoreFailures true
-    configFile file('config/codenarc/ruleset.groovy')
+task run(dependsOn: 'classes', type: JavaExec) {
+    description 'Runs a groovy script in src/main/groovy'
+    group 'Tutorial'
+
+    classpath = sourceSets.main.runtimeClasspath
+    workingDir = 'src/main/groovy'
+
+    def script = System.getProperty("script")?: 'directory-list'
+    println "\nRunning script: $script\n"
+
+    main = script
 }
 
-apply plugin: 'org.asciidoctor.convert'
-asciidoctor {
-    resources {
-        from('src/main/groovy') {
-            include '*.groovy'
-            include 'resources/*'
-        }
-        into 'src'
-    }
-}
+defaultTasks 'run'

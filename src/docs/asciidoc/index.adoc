@@ -1,0 +1,54 @@
+= Reading and writing JSON
+Duncan Dickinson <duncan@groovy-tutorial.org>
+v0.1, 2015-08-25
+:groovy-version: 2.4.5
+:licence: Apache License, Version 2.0
+:licence-url: http://www.apache.org/licenses/LICENSE-2.0
+:src: https://github.com/groovy-tutorial/basic-json
+:sourcedir: ../../main/groovy
+:level: basic
+:keywords: files, json
+:description: This tutorial will provide an introduction to working with JSON files
+:icons: font
+:source-highlighter: coderay
+:source-language: groovy
+:toc:
+
+Groovy lets you easily work with JSON files
+
+== Introduction
+
+=== Using this tutorial
+For details on running the tutorial on your own system, please refer to the http://www.groovy-tutorial.org/GettingStarted.html[Getting started guide]
+
+Access the source code:
+
+* {src}/tree/gh-pages[Source code]
+* {src}/archive/gh-pages.zip[As a zip file]
+
+The source code includes two command line scripts: `run` (for *nix) and `run.bat` (for Windows) - they are very basic helpers that let you run the tutorial scripts via Gradle. To use the `run` scripts just call `run <script>` where `<script>` is the name of the script minus the `.groovy` extension. For example, to run the `directory-list.groovy` script you just use:
+
+    ./run directory-list
+
+The code in this tutorial was prepared using Groovy version {groovy-version} and is licensed under {licence-url}[{licence}].
+
+== Reading JSON
+[source]
+.link:src/main/groovy/json-read.groovy[file-read-info.groovy]
+----
+include::{sourcedir}/json-read.groovy[]
+----
+
+== Writing JSON
+[source]
+.link:src/main/groovy/json-write.groovy[file-read-info.groovy]
+----
+include::{sourcedir}/json-write.groovy[]
+----
+
+== Building JSON
+[source]
+.link:src/main/groovy/json-builder.groovy[file-read-info.groovy]
+----
+include::{sourcedir}/json-builder.groovy[]
+----
